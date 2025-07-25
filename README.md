@@ -1,77 +1,87 @@
 # Quote Generator
 
-Welcome! This is a simple web project that fetches and displays random quotes. It’s made to be fast, easy to use, and fun to tweak.
+Welcome to the Quote Generator project! This application lets you discover and display random quotes from multiple categories, making it perfect for daily inspiration, motivation, or just a bit of fun.
 
----
+## Features
 
-## What’s Inside
-
-- **Live Quotes:** The app pulls quotes from an online API, so you always see something new.
-- **Clean Interface:** Minimal design, no clutter—just the quotes.
-- **Deployable:** Works well locally and can be deployed to Vercel or similar platforms.
-
----
-
-## How It Works
-
-Every time you hit the “Get Quote” button, the app asks an API for a fresh quote. The response shows up instantly. No page reloads, just the quote you wanted.
-
----
+- **Random Quotes**: Generate a new quote at the click of a button.
+- **Author & Category Display**: See who said the quote and its category.
+- **Clean UI**: Simple layout for easy reading and interaction.
+- **API Integration**: Fetches quotes from a third-party API, so you always get fresh content.
 
 ## Getting Started
 
-1. **Clone the repo:**
+To run the project locally, follow these steps:
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) installed on your system.
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for package management.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/DashFrontDev/Quote_Generator.git
+   cd Quote_Generator
    ```
-   git clone https://github.com/DashFrontDev/Quote-Gen.git
-   ```
+
 2. **Install dependencies:**
-   ```
+   ```bash
    npm install
+   # or
+   yarn install
    ```
-3. **Run locally:**
+
+3. **Set up environment variables:**
+
+   Create a `.env` file in the root directory and add your API key:
    ```
-   npm start
+   VITE_API_NINJAS_KEY=your_api_key_here
    ```
-   Open your browser at [http://localhost:3000](http://localhost:3000).
 
----
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## Environment Variables
+5. Open your browser and go to `http://localhost:5173` (or the port shown in your terminal).
 
-The app uses an external API. You’ll need an API key. Add this to your environment:
+## Usage
+
+- Click the **Generate Quote** button to fetch and display a new quote.
+- Each quote includes the text, author, and category.
+
+## Project Structure
 
 ```
-REACT_APP_API_NINJAS_KEY=your-api-key-here
+public/             # Static assets
+src/                # Source code
+  ├── QuoteGenTemplate.jsx
+  ├── QuoteGenerator.css
+  └── QuoteGen.jsx
+.eslint.config.js   # Linting rules
+index.html          # Main HTML file
+vite.config.js      # Vite configuration
+package.json        # Project metadata & scripts
 ```
 
-If you’re deploying to Vercel, set the environment variable in the dashboard before deploying.
+## Technologies Used
 
----
+- **React** for building the user interface.
+- **Vite** for fast development and bundling.
+- **CSS** for styling.
+- **API Ninjas** for quote data.
 
-## Deploying
+## Contributing
 
-After pushing your changes to GitHub:
-- Go to [Vercel](https://vercel.com/)
-- Import your repo
-- Add the environment variable for your API key
-- Hit **Deploy**
-
-That’s it! Your site should be live in a minute or two.
-
----
-
-## Customization
-
-Feel free to change the styles or even the API source. Want to show different types of quotes? Swap the API endpoint or tweak the display logic.
-
----
-
-## Credits
-
-Thanks to [api-ninjas.com](https://api-ninjas.com/) for providing the quote API.
-
----
+Pull requests are welcome! If you have ideas for improvements or new features, feel free to fork the repo and submit a PR.
 
 ## License
 
-Do whatever you want with this code. Attribution appreciated but not required.
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Enjoy discovering new quotes!
