@@ -17,7 +17,7 @@ const QuoteGen = () => {
       const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
         method: 'GET',
         headers: {
-          "X-Api-Key": "E+7IafwkPJY2AmQ1m5e+7Q==JCAPOdPiKhp2WvRD"
+          "X-Api-Key": VITE_API_NINJAS_KEY
         }
       });
       if (!response.ok) {
